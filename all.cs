@@ -1,4 +1,4 @@
-using System; // все работает только с положительными числами
+using System;
 
 class Program
 {
@@ -10,9 +10,9 @@ class Program
         }
     }
     static void input_mass(out int[] mass, int a){
-        mass= new int[a+1];
+        mass= new int[a];
         int k = 0;
-            for (int i = 0; i <= a; i++)
+            for (int i = 0; i < a; i++)
             {
                 mass[k] = Convert.ToInt32(Console.ReadLine());
                 k++;
@@ -107,7 +107,7 @@ class Program
     public static void Main()
     {
         int a = Convert.ToInt32(Console.ReadLine());
-        int[] mass = new int[a+1];
+        int[] mass = new int[a];
         input_mass(out mass, a);
         bet_mx_and_mn(mass);
         Console.WriteLine("_____________");
@@ -115,12 +115,12 @@ class Program
         cyclic_shift(mass, k);
         Console.WriteLine("________________");
         int a1 = Convert.ToInt32(Console.ReadLine());
-        int[] mass1 = new int[a1 + 1];
-        int[] mass2 = new int[a1 + 1];
+        int[] mass1 = new int[a1];
+        int[] mass2 = new int[a1];
         input_mass(out mass1, a1);
         input_mass(out mass2, a1);
         int a2 = Convert.ToInt32(Console.ReadLine());
-        int[] mass3 = new int[a2 + 1];
+        int[] mass3 = new int[a2];
         input_mass(out mass3, a2);
 
         del_same(ref mass);
